@@ -8,11 +8,12 @@ public class RenduOpti {
 	private static double difference;
 	private static boolean error;
 	private static boolean printed;
+	private static boolean nothing;
+	private static String coins = " pièces(s) de ";
+	private static String billet = " billet(s) de ";
 	
 	public static void main(String[] args) {
 		
-		String coins = " pièces(s) de ";
-		String billet = " billet(s) de ";
 		System.out.println("Entrez la somme à payer");
 		somme = input.nextDouble();
 		System.out.println("Entrez combien vous avez payé");
@@ -36,17 +37,24 @@ public class RenduOpti {
 			error = true;
 			return false;
 		}
-		if(!printed && difference > 0) {
-			System.out.print("Nous avons rendu la somme de "+difference+" € en ");
-			printed = true;
+		if(difference == 0 && !nothing) {
+			System.out.println("Nous n'avons rien à rendre");
+			nothing = true;
 		}
-		int i = 0;
-		while(difference-coins >= 0) {
-			difference = Math.round(100*(difference-coins))/100.0;
-			i++;
-		}
-		if(i > 0) {
-			System.out.print(i+a);
+		if(difference > 0) {
+			if(!printed) {
+				System.out.print("Nous avons rendu la somme de "+difference+" € en ");
+				printed = true;
+			}
+			nothing = true;
+			int i = 0;
+			while(difference-coins >= 0) {
+				difference = Math.round(100*(difference-coins))/100.0;
+				i++;
+			}
+			if(i > 0) {
+				System.out.print(i+a);
+			}
 		}
 		return true;
 	}
