@@ -6,28 +6,40 @@ public class RenduOpti {
 	private static double money;
 	private static double somme;
 	private static double difference;
+	private static boolean error;
+	private static boolean printed;
 	
 	public static void main(String[] args) {
 		
+		String coins = " pièces(s) de ";
+		String billet = " billet(s) de ";
 		System.out.println("Entrez la somme à payer");
 		somme = input.nextDouble();
 		System.out.println("Entrez combien vous avez payé");
 		money = input.nextDouble();
 		difference = Math.round(100*(money-somme))/100.0;
-		System.out.print("Nous avons rendu la somme de "+difference+" € en ");
-		rendu(" billet(s) de 20€ ", 20);
-		rendu(" billet(s) de 10€ ", 10);
-		rendu(" billet(s) de 5€ ", 5);
-		rendu(" pièce(s) de 2€ ", 2);
-		rendu(" pièce(s) de 1€ ", 1);
-		rendu(" pièce(s) de 50c ", .5);
-		rendu(" pièce(s) de 10c ", .1);
-		rendu(" pièce(s) de 5c ", .05);
-		rendu(" pièce(s) de 2c ", .02);
-		rendu(" pièce(s) de 1c ", .01);
+		rendu(billet+"20€, ", 20);
+		rendu(billet+"10€, ", 10);
+		rendu(billet+"5€, ", 5);
+		rendu(coins+"2€, ", 2);
+		rendu(coins+"1€, ", 1);
+		rendu(coins+"50c, ", .5);
+		rendu(coins+"10c, ", .1);
+		rendu(coins+"5c, ", .05);
+		rendu(coins+"2c, ", .02);
+		rendu(coins+"1c, ", .01);
 	}
 	
-	private static void rendu(String a, double coins) {
+	private static boolean rendu(String a, double coins) {
+		if(difference < 0 && !error) {
+			System.out.println("Vous n'avez pas donné assez d'argent");
+			error = true;
+			return false;
+		}
+		if(!printed && difference > 0) {
+			System.out.print("Nous avons rendu la somme de "+difference+" € en ");
+			printed = true;
+		}
 		int i = 0;
 		while(difference-coins >= 0) {
 			difference = Math.round(100*(difference-coins))/100.0;
@@ -36,5 +48,6 @@ public class RenduOpti {
 		if(i > 0) {
 			System.out.print(i+a);
 		}
+		return true;
 	}
 }
