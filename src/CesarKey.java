@@ -1,3 +1,10 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class CesarKey {
@@ -7,7 +14,7 @@ public class CesarKey {
 	private static String result;
 	private static StringBuilder builder = new StringBuilder();
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Entrez la clé de chiffrement : ");
 		key = input.nextLine();
@@ -18,6 +25,7 @@ public class CesarKey {
 		}
 		else {
 			cesarCrypt(decrypt, key);
+			saveKey(result, key);
 		}
 		input.close();
 	}
@@ -35,5 +43,45 @@ public class CesarKey {
 			i++;
 		}
 		System.out.println(result);
+	}
+	
+	public static void saveKey(String result, String key) throws FileNotFoundException {
+		BufferedReader br = null;
+		try {
+			String content = "";
+			String sCurrentLine;
+			int i = 0;
+			int j = 3;
+			File file = new File("crypted.txt");
+				if (!file.exists()) {
+					file.createNewFile();
+				}
+			br = new BufferedReader(new FileReader("crypted.txt"));
+			while(i < j) {
+				sCurrentLine = br.readLine();
+				if(sCurrentLine != null) {
+					content+= sCurrentLine+System.lineSeparator();
+					j++;
+				}
+				else {
+					if(i == j-2) {
+						content+= "Key :    "+key+System.lineSeparator();
+					}
+					else if(i == j-1) {
+						content+= "Result : "+result+System.lineSeparator();
+						content+= System.lineSeparator();
+					}
+				}
+				i++;
+			}
+			FileWriter fw = new FileWriter(file.getAbsoluteFile());
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(content);
+			bw.close();
+			br.close();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
