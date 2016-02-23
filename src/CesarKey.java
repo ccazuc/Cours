@@ -26,6 +26,7 @@ public class CesarKey {
 		else {
 			cesarCrypt(decrypt, key);
 			saveKey(result, key);
+			System.out.println("Saved in crypted.txt");
 		}
 		input.close();
 	}
@@ -65,11 +66,10 @@ public class CesarKey {
 				}
 				else {
 					if(i == j-2) {
-						content+= "Key :    "+key+System.lineSeparator();
+						content+= "Key    : "+key+System.lineSeparator();
 					}
 					else if(i == j-1) {
-						content+= "Result : "+result+System.lineSeparator();
-						content+= System.lineSeparator();
+						content+= "Result : "+result+System.lineSeparator()+System.lineSeparator();
 					}
 				}
 				i++;
