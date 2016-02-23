@@ -13,7 +13,7 @@ public class MysteryNumber {
 		System.out.println("Devinez le nombre auquel je pense ?");
 		int player = input.nextInt();
 		int number  = a + rand.nextInt( b - a );
-		while ( number) != player ) {
+		while ( number != player ) {
 		      sup ( input, player, number);
 		      inf ( input, player, number);
 		}

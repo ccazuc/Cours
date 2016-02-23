@@ -8,69 +8,59 @@ public class MysteryNumberbis {
 		
 		System.out.println("Si c'est le joueur qui choisit, entrez 1, sinon, entrez 0");
 		int difficulty = input.nextInt();
+		System.out.println("Entrez a tel que [a,b[");
+		int a = input.nextInt();
+		System.out.println("Entrez b tel que [a,b[");
+		int b = input.nextInt();
 		
-		if ( difficulty == 1 ) {
-			System.out.println("Entrez a tel que [a,b]");
-			int a = input.nextInt();
-			System.out.println("Entrez b tel que [a,b]");
-			int b = input.nextInt();
+		if (difficulty == 1) {
 			System.out.println("Devinez le nombre auquel je pense ?");
 			int player = input.nextInt();
-			int number  = a + rand.nextInt( b - a );
+			if (b < a) {
+				System.out.print("Invalid ( b must be greater than a )");
+				input.close();
+				return;
+			}
+			int number = a+rand.nextInt(b-a);
 			
-			while ( number != player ) {
-				 while ( number > player ) {
+			while (number != player) {
+				 while (number > player) {
 				      System.out.println("Vous êtes au dessous de la solution ");
 				      System.out.println("Devinez le nombre auquel je pense ?");
 				      player = input.nextInt();
-				      if ( number == player ) {
-					    System.out.println("Vous avez trouvé le bon nombre !");
+				      if (number == player) {
+				    	  System.out.println("Vous avez trouvé le bon nombre !");
 				      }
 				}
-			    while ( number < player ) {
+			    while (number < player) {
 			    	System.out.println("Vous êtes au dessus de la solution ");
 			    	System.out.println("Devinez le nombre auquel je pense ?");
 			    	player = input.nextInt();
-			    	if ( number == player ) {
+			    	if (number == player) {
 			    		System.out.println("Vous avez trouvé le bon nombre !");
 				    }
 			   }
 			}
 		}
 		else {
-			System.out.println("Entrez a tel que [a,b]");
-			int a = input.nextInt();
-			System.out.println("Entrez b tel que [a,b]");
-			int b = input.nextInt();
 			System.out.println("Entrez le nombre que l'ordinateur doit trouver");
 			int player = input.nextInt();
-			int number = ( b - a ) / 2;
-			int c = 0;
-			int d = 0;
+			double number = b/2;
+			double number1 = (b-number)/2; 
 			
-			while ( number != player ) {
-				System.out.println("Le nombre auquel l'ordinateur pense est "+number+", s'il est inférieur à votre nombre, entrez 0, sinon, entrez 1");
+			while (Math.floor(number) != player) {
+				System.out.println("Le nombre auquel l'ordinateur pense est "+(int)Math.floor(number)+", s'il est inférieur à votre nombre, entrez 0, sinon, entrez 1");
 				int order = input.nextInt();
-				if ( order == 0 ) {
-					if ( c == 0 ) {
-						number += ( b - number ) / 2;			
-						d++;
-					}
-					else {
-						number++;
-					}
+				if (order == 0) {
+					number+= number1;
+					number1 = number1 / 2;
 				}
 				else {
-					if ( d == 0 ) {
-						number-= ( a - number ) / 2;
-						c++;
-					}
-					else {
-						number--;
-					}
+					number-= number1;
+					number1 = number1 / 2;
 				}
 			}
-			System.out.println("L'ordinateur a trouvé votre nombre, c'était "+number);
+			System.out.println("L'ordinateur a trouvé votre nombre, c'était "+(int)Math.floor(number));
 		}
 		input.close();
 	}			
