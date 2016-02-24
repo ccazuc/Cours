@@ -13,21 +13,25 @@ public class CesarKey {
 	private static String key;
 	private static String result;
 	private static StringBuilder builder = new StringBuilder();
+	private static boolean keySize;
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Entrez la clé de chiffrement : ");
-		key = input.nextLine();
+		while(!keySize) {
+			key = input.nextLine();
+			if(key.length() >= 26) {
+				keySize = true;
+			}
+			else {		
+				System.out.println("La taille de la clé n'est pas valide.");
+			}
+		}
 		System.out.println("Entrez le message à crypter : ");
 		decrypt = input.nextLine();
-		if(key.length() < 26) {
-			System.out.println("La taille de la clé n'est pas valide.");
-		}
-		else {
-			cesarCrypt(decrypt, key);
-			saveKey(result, key);
-			System.out.println("Saved in crypted.txt");
-		}
+		cesarCrypt(decrypt, key);
+		saveKey(result, key);
+		System.out.println("Saved in crypted.txt");
 		input.close();
 	}
 
@@ -43,7 +47,7 @@ public class CesarKey {
 			result = builder.toString();
 			i++;
 		}
-		System.out.println(result);
+		System.out.println("Message : "+decrypt+", crypted message : "+result);
 	}
 	
 	public static void saveKey(String result, String key) throws FileNotFoundException {
