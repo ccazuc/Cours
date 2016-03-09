@@ -27,7 +27,7 @@ public class Cesar {
 		input.close();
 	}
 
-	public static void cesarCrypt (String msg, int shift) {
+	public static void cesarCrypt (String msg, int shift) { 
 		int i = 0;
 		while(i < msg.length()) {
 			builder.append((char)(msg.substring(i).charAt(0)+shift));

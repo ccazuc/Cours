@@ -31,7 +31,7 @@ public class CesarKey {
 		decrypt = input.nextLine();
 		cesarCrypt(decrypt, key);
 		saveKey(result, key);
-		System.out.println("Saved in crypted.txt");
+		System.out.println("Saved in crypted.txt ");
 		input.close();
 	}
 
