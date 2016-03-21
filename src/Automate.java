@@ -11,28 +11,23 @@ public class Automate {
 		System.out.println("Entrez le nombre d'itérations");
 		int iteration = input.nextInt();
 		System.out.println("Entrez la règle");
-		int rule = input.nextInt();
-		line.add("....................................*....................................");
+		Integer rule = input.nextInt();   
+		String ruleString = Integer.toBinaryString(rule);
+		line.add("...........*......................*.....................*......................*.....................*............................*...........................*");
 		int i = 0;
 		int j = 0;
 		int k = 0;
 		int voisins = 0;
-		System.out.println((rule >> 0) & 1);
-		System.out.println((rule >> 1) & 1);
-		System.out.println((rule >> 2) & 1);
-		System.out.println((rule >> 3) & 1);
-		System.out.println((rule >> 4) & 1);
-		System.out.println((rule >> 5) & 1);
 		while(i < iteration) {
 			j = 0;
-			while(j < line.get(i).length()) {
+			while(j < line.get(0).length()) {
 				voisins = voisinage(line.get(i), j);
 				k = 0;
-				while(k < rule) {
-					if(((rule >> k) & 1) == 0 && voisins == 0) {
+				while(k <= ruleString.length()+1) {
+					if(((rule >> k) & 1) == 0 && voisins == k) {
 						builder.append(".");
 					}
-					else if(((rule >> k) & 1) == 1 && voisins == 1) {
+					if(((rule >> k) & 1) == 1 && voisins == k) {
 						builder.append("*");
 					}
 					k++;
@@ -83,7 +78,7 @@ public class Automate {
 			}
 			line.add(builder.toString());
 			System.out.println(line.get(i));
-			builder.delete(0, line.get(i).length()+1);
+			builder.delete(0, line.get(i).length());
 			i++;
 		}
 	}
