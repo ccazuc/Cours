@@ -8,8 +8,5 @@ public class TestVectorAndPoint {
 		Triangle triangle = new Triangle(1, 2, 3, 6, 4, 2);
 		
 		System.out.println(triangle.perimeter());
-		System.out.println(x.distanceTo(y));
-		System.out.println(y.distanceTo(z));
-		System.out.println(z.distanceTo(x));
 	}
 }

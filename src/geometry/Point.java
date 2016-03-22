@@ -41,8 +41,6 @@ public class Point {
 	 * @return double
 	 */
 	public double distanceTo(Point point) {
-		System.out.println("x : "+x+" y :  "+y+" xvect : "+point.getX()+" yvect : "+point.getY());
-		System.out.println("1 : "+Math.pow(point.getX()-x, 2)+" 2 : "+Math.pow(point.getY()-y, 2));
 		return Math.sqrt(Math.pow(point.getX()-x, 2)+Math.pow(point.getY()-y, 2));
 	}
 	

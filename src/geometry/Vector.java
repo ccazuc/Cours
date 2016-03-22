@@ -34,6 +34,14 @@ public class Vector {
 	}
 	
 	/**
+	 * Return a new vector with the same direction and a norm equals to 1
+	 * @return Vector
+	 */
+	public Vector normalize() {
+		return new Vector(x/norm(), y/norm());
+	}
+	
+	/**
 	 * Create a new Vector by multiplying one existing Vector by a scalar 
 	 * @param scalar
 	 * @return Vector
