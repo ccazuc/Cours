@@ -1,5 +1,10 @@
 package geometry;
 
+/**
+ * 
+ * @author cc140988
+ *
+ */
 public class TestVectorAndPoint {
 	public static void main(String[] args) {
 		Point x = new Point(1, 2);
