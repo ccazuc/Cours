@@ -1,5 +1,10 @@
 package geometry;
 
+/**
+ * 
+ * @author cc140988
+ *
+ */
 public class Triangle {
 
 	private double xFirstPoint;
