@@ -31,8 +31,8 @@ public class Point {
 	 */
 	public Point middle(Point point) {
 		Vector tempVector = new Vector(new Point(this.x, this.y), point);
-		Vector temp = tempVector.mult(.5);
-		return translate(temp);
+		tempVector = tempVector.mult(.5);
+		return translate(tempVector);
 	}
 	
 	/**
