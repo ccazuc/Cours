@@ -1,9 +1,7 @@
 package geometry;
 
 /**
- * 
  * @author cc140988
- *
  */
 public class Triangle {
 
@@ -51,10 +49,6 @@ public class Triangle {
 		Point thirdPoint = new Point(xThirdPoint, yThirdPoint);
 		return firstPoint.distanceTo(secondPoint)+secondPoint.distanceTo(thirdPoint)+thirdPoint.distanceTo(firstPoint);
 	}
-	
-	//public double pperimeter() {
-		//Vector first = new Vector()
-	//}
 	
 	/**
 	 * return triangle's first point's x coordonate
