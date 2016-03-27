@@ -10,7 +10,7 @@ public class TestVectorAndPoint {
 		Point z = new Point(4, 2);
 		Triangle triangle = new Triangle(1, 2, 3, 6, 4, 2);
 		
-		System.out.println(x.middle(y));
-		System.out.println(triangle.perimeter());
+		//System.out.println(x.middle(y));
+		//System.out.println(triangle.perimeter());
 	}
 }

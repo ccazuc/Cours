@@ -9,7 +9,7 @@ public class Vector {
 	private double y;
 	
 	/**
-	 * Create a new Vector with (x,y) coordonates
+	 * Create a new <code>Vector</code> with (<code>double</code> x, <code>double</code> y) coordonates
 	 * @param x
 	 * @param y
 	 */
@@ -19,7 +19,7 @@ public class Vector {
 	}
 	
 	/**
-	 * Create a new null Vector
+	 * Create a new null <code>Vector</code>
 	 */
 	public Vector() {
 		this.x = 0;
@@ -27,17 +27,17 @@ public class Vector {
 	}
 	
 	/**
-	 * Create a new Vector between two points
+	 * Create a new <code>Vector</code> between two <code>Point</code>
 	 * @param beginning
 	 * @param end
 	 */
 	public Vector(Point beginning, Point end) {
-		this.x = end.getX()-beginning.getX();
-		this.y = end.getY()-beginning.getY();
+		x = end.getX()-beginning.getX();
+		y = end.getY()-beginning.getY();
 	}
 	
 	/**
-	 * Return a new vector with the same direction and a norm equals to 1
+	 * Return a new <code>Vector</code> with the same direction and a norm equals to 1
 	 * @return Vector
 	 */
 	public Vector normalize() {
@@ -45,7 +45,7 @@ public class Vector {
 	}
 	
 	/**
-	 * Create a new Vector by multiplying one existing Vector by a scalar 
+	 * Create a new <code>Vector</code> by multiplying the <code>Vector</code> by a scalar 
 	 * @param scalar
 	 * @return Vector
 	 */
@@ -54,7 +54,7 @@ public class Vector {
 	}
 	
 	/**
-	 * Add a Vector to an existing Vector
+	 * Add a <code>Vector</code> to the <code>Vector</code>
 	 * @param vector
 	 * @return Vector
 	 */
@@ -63,7 +63,7 @@ public class Vector {
 	}
 	
 	/**
-	 * Return the norm of an existing Vector
+	 * Return the norm of the <code>Vector</code>
 	 * @return double
 	 */
 	public double norm() {
@@ -71,21 +71,21 @@ public class Vector {
 	}
 	
 	/**
-	 * Convert an existing Vector to a (x,y) format
+	 * Convert an existing <code>Vector</code> to a (<code>double</code> x, <code>double</code> y) format
 	 */
 	public String toString() {
 		return "("+Double.toString(x)+","+Double.toString(y)+")";
 	}
 	
 	/**
-	 * Display an existing Vector in (x,y) format
+	 * Display an existing <code>Vector</code> in (<code>double</code> x, <code>double</code> y) format
 	 */
 	public void display() {
 		System.out.println(toString());
 	}
 	
 	/**
-	 * return Vector'x coordonate
+	 * return <code>Vector</code>'x coordonate
 	 * @return double
 	 */
 	public double getX() {
@@ -93,7 +93,7 @@ public class Vector {
 	}
 	
 	/**
-	 * set Vector's x coordonate
+	 * set <code>Vector</code>'s x coordonate
 	 * @param x
 	 */
 	public void setX(double x) {
@@ -101,7 +101,7 @@ public class Vector {
 	}
 	
 	/**
-	 * return Vector's y coordonate
+	 * return <code>Vector</code>'s y coordonate
 	 * @return double
 	 */
 	public double getY() {
@@ -109,7 +109,7 @@ public class Vector {
 	}
 	
 	/**
-	 * set Vector's y coordonate
+	 * set <code>Vector</code>'s y coordonate
 	 * @param y
 	 */
 	public void setY(double y) {

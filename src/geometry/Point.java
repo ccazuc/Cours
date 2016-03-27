@@ -11,7 +11,7 @@ public class Point {
 	private double y;
 	
 	/**
-	 * Create a new points with (x,y) coordonates
+	 * Create a new points with (<code>double</code> x, <code>double</code> y) coordonates
 	 * @param x
 	 * @param y
 	 */
@@ -21,7 +21,7 @@ public class Point {
 	}
 	
 	/**
-	 * Translate a points by a given Vector
+	 * Translate a <code>Point</code> by a given <code>Vector</code>
 	 * @param vector
 	 * @return Point
 	 */
@@ -30,7 +30,7 @@ public class Point {
 	}
 	
 	/**
-	 * Return the Point in the middle of two given Point
+	 * Return the <code>Point</code> in the middle of two given <code>Point</code>
 	 * @param point
 	 * @return Point
 	 */
@@ -40,7 +40,7 @@ public class Point {
 	}
 	
 	/**
-	 * Return the distance between two existing points
+	 * Return the distance between two existing <code>Point</code>
 	 * @param point
 	 * @return double
 	 */
@@ -49,21 +49,21 @@ public class Point {
 	}
 	
 	/**
-	 * Convert an existing Point to a (x,y) format
+	 * Convert an existing <code>Point</code> to a (<code>double</code> x, <code>double</code> y) format
 	 */
 	public String toString() {
 		return "("+Double.toString(x)+","+Double.toString(y)+")";
 	}
 	
 	/**
-	 * Display an existing Point in (x,y) format
+	 * Display an existing <code>Point</code> in (<code>double</code> x, <code>double</code> y) format
 	 */
 	public void display() {
 		System.out.println(toString());
 	}
 	
 	/**
-	 * return Vector'x coordonate
+	 * return <code>Vector</code>'x coordonate
 	 * @return int
 	 */
 	public double getX() {
@@ -71,7 +71,7 @@ public class Point {
 	}
 	
 	/**
-	 * set Vector's x coordonate
+	 * set <code>Vector</code>'s x coordonate
 	 * @param x
 	 */
 	public void setX(int x) {
@@ -79,7 +79,7 @@ public class Point {
 	}
 	
 	/**
-	 * return Vector's y coordonate
+	 * return <code>Vector</code>'s y coordonate
 	 * @return double
 	 */
 	public double getY() {
@@ -87,7 +87,7 @@ public class Point {
 	}
 	
 	/**
-	 * set Vector's y coordonate
+	 * set <code>Vector</code>'s y coordonate
 	 * @param y
 	 */
 	public void setY(int y) {

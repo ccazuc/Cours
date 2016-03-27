@@ -13,7 +13,7 @@ public class Triangle {
 	private double yThirdPoint;
 	
 	/**
-	 * Create a new Triangle based on 3 points
+	 * Create a new <code>Triangle</code> based on 3 points
 	 * @param xFirstPoint
 	 * @param yFirstPoint
 	 * @param xSecondPoint
@@ -31,7 +31,7 @@ public class Triangle {
 	}
 	
 	/**
-	 * translate the triangle with a given Vector
+	 * translate the <code>Triangle</code> with a given <code>Vector</code>
 	 * @param vector
 	 * @return Triangle
 	 */
@@ -40,7 +40,7 @@ public class Triangle {
 	}
 	
 	/**
-	 * return the perimeter of the triangle
+	 * return the perimeter of the <code>Triangle</code>
 	 * @return double
 	 */
 	public double perimeter() {
@@ -51,7 +51,7 @@ public class Triangle {
 	}
 	
 	/**
-	 * return triangle's first point's x coordonate
+	 * return <code>Triangle</code>'s first point's x coordonate
 	 * @return double
 	 */
 	public double getXFirstPoint() {
@@ -59,7 +59,7 @@ public class Triangle {
 	}
 	
 	/**
-	 * return triangle's first point's y coordonate
+	 * return <code>Triangle</code>'s first point's y coordonate
 	 * @return double
 	 */
 	public double getYFirstPoint() {
@@ -67,7 +67,7 @@ public class Triangle {
 	}
 	
 	/**
-	 * return triangle's second point's x coordonate
+	 * return <code>Triangle</code>'s second point's x coordonate
 	 * @return double
 	 */
 	public double getXSecondPoint() {
@@ -75,7 +75,7 @@ public class Triangle {
 	}
 	
 	/**
-	 * return triangle's second point's y coordonate
+	 * return <code>Triangle</code>'s second point's y coordonate
 	 * @return double
 	 */
 	public double getYSecondPoint() {
@@ -83,7 +83,7 @@ public class Triangle {
 	}
 	
 	/**
-	 * return triangle's third point's x coordonate
+	 * return <code>Triangle</code>'s third point's x coordonate
 	 * @return double
 	 */
 	public double getXThirdPoint() {
@@ -91,7 +91,7 @@ public class Triangle {
 	}
 	
 	/**
-	 * return triangle's third point's y coordonate
+	 * return <code>Triangle</code>'s third point's y coordonate
 	 * @return double
 	 */
 	public double getYThirdPoint() {
