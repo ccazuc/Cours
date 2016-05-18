@@ -8,17 +8,30 @@ public class MaBelleCollection {
 	
 	public MaBelleCollection() {}
 	
+	/**
+	 * return snowBall list's size
+	 * @return
+	 */
 	public static int taille() {
 		return snowBall.size();
 	}
 	
+	/**
+	 * return the snowBall at the given index
+	 * @param index
+	 * @return
+	 */
 	public static BouleANeige boule(int index) {
 		if(index >= 0 && index < taille()) {
 			return snowBall.get(index);
 		}
+		System.out.println("invalid index");
 		return null;
 	}
 	
+	/**
+	 * display all snowBall in the list
+	 */
 	public static void affiche() {
 		int i = 0;
 		while(i < taille()) {
@@ -27,7 +40,11 @@ public class MaBelleCollection {
 		}
 	}
 	
-	public static void research(String desc) {
+	/**
+	 * display snowBall with the same description
+	 * @param desc
+	 */
+	public static void recherche(String desc) {
 		int i = 0;
 		while(i < taille()) {
 			if(snowBall.get(i).getDescription().equals(desc)) {
@@ -37,10 +54,14 @@ public class MaBelleCollection {
 		}
 	}
 	
+	/**
+	 * remove every snowBall in the list with the same description
+	 * @param desc
+	 */
 	public static void filtre(String desc) {
 		int i = 0;
 		while(i < taille()) {
-			if(snowBall.get(i).equals(desc)) {
+			if(snowBall.get(i).getDescription().equals(desc)) {
 				snowBall.remove(i);
 				i--;
 				continue;
@@ -49,6 +70,10 @@ public class MaBelleCollection {
 		}
 	}
 	
+	/**
+	 * delete every snowBall copy in the list
+	 * @return
+	 */
 	public static ArrayList<BouleANeige> retireDoublon() {
 		int i = 0;
 		int j = 0;
@@ -59,6 +84,7 @@ public class MaBelleCollection {
 			while(j < taille()) {
 				if(snowBall.get(j).egaleA(snowBall.get(i))) {
 					doublon.add(snowBall.get(j));
+					i++;
 					continue first;
 				}
 				j++;

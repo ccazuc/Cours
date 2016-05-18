@@ -11,9 +11,9 @@ while(i < arrayList.size()) {
   i++;
 }
 
-2) Sa durée de vie est l'endroit où elle à été définit, une condition, une boucle, une fonction.
+2) Sa durée de vie est l'endroit où elle à été définit, c'est à dire le bloc d'accolades où elle a été déclaré.
 
-3) Certaines classes sont dites génératrices car elles permettent de créer des objets via des constructeurs comme la classe NombreRationnel du partiel.
+3) Certaines classes sont dites génératrices car elles permettent de créer des objets via des constructeurs comme la classe NombreRationnel du partiel ou la classe BouleANeige de cet examen.
 
 4) tableau :
 table.length
