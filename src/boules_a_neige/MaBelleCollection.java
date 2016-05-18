@@ -82,7 +82,7 @@ public class MaBelleCollection {
 		while(i < taille()) {
 			j = 0;
 			while(j < taille()) {
-				if(snowBall.get(j).egaleA(snowBall.get(i))) {
+				if(snowBall.get(j).egaleA(snowBall.get(i))	&& !snowBall.contains(snowBall.get(j))) {
 					doublon.add(snowBall.get(j));
 					i++;
 					continue first;
