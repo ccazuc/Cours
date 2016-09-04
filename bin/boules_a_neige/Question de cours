@@ -1,0 +1,22 @@
+1) Non on ne peut pas, voici une méthode alternative : 
+int i = 0;
+int indexRemove = 5; //indice de l'index à enlever
+ArrayList<String> arrayList = new  ArrayList<String>(20);
+while(i < arrayList.size()) {
+  if(i == indexRemove) {
+    arrayList.remove(i);
+    i--;
+    continue;
+  }
+  i++;
+}
+
+2) Sa durée de vie est l'endroit où elle à été définit, c'est à dire le bloc d'accolades où elle a été déclaré.
+
+3) Certaines classes sont dites génératrices car elles permettent de créer des objets via des constructeurs comme la classe NombreRationnel du partiel ou la classe BouleANeige de cet examen.
+
+4) tableau :
+table.length
+
+ArrayList :
+arrayList.size()
