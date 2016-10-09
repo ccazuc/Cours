@@ -1,0 +1,32 @@
+Examen Algorithmique et Java
+
+Mercredi 18 mai 2016, 3 heures
+
+Aucun document autorisé
+
+Questions de cours (4pts)
+
+Vous pouvez placer les réponses à ces questions au sein du fichier README.TXT du projet BlueJ suivant ou dans un fichier texte que vous joindrez à l'archive de rendu.
+Peut-on retirer certains éléments d'une ArrayList durant une boucle "pour-tout" sur cette liste ? Si oui expliquez comment, sinon donnez une méthode alternative.
+Quelle est la durée de vie d'une variable locale ?
+Pourquoi certaines classes sont-elles dites génériques ? Donnez un exemple.
+Comment connaître la taille d'un tableau ? D'une ArrayList ?
+
+Problème - Chionosphérophilie (16pts)
+
+Un passionné chionosphérophile cherche à créer une base de données sur sa collection de boules à neige. Pour l'aider, on se propose de créer deux classes, une première BouleANeige permet de représenter l'objet de sa passion, et une autre MaBelleCollection permet de stocker l'intégralité des boules à neige.
+
+Créez un projet Bluej nommé boules-a-neige, et placez-y les deux classes citées ci-dessus.
+La classe BouleANeige ne contient qu'une description textuelle des objets (à défaut de savoir y stocker des photos), ainsi que les dimensions largeur et hauteur afin de pouvoir les organiser en belles étagères. Déterminez les champs nécessaires à cette classe.
+Ajoutez à la classe une méthode affiche qui affiche sur le terminal la description et les dimensions de la boule à neige.
+La classe MaBelleCollection doit contenir l'ensemble de la collection d'objets de type BouleANeige, on considère que chaque boule à neige est insérée à la fin de la collection, que cette collection conserve l'ordre des éléments et que chaque boule à neige est numérotée dans l'ordre d'insertion. Déterminez le(s) champ(s) nécessaires dans cette classe pour stocker l'ensemble des boules à neige.
+Ajoutez un constructeur sans argument.
+Ajoutez une méthode taille retournant le nombre de boules à neige actuellement dans la collection.
+Ajoutez une méthode boule qui prend en argument le numéro d'une boule à neige et la retourne. Doit-on faire des vérifications spéciales ?
+Faire une méthode affiche qui liste l'intégralité des boules à neige en affichant leur description.
+Faire une méthode recherche qui prend en argument une chaîne de caractères et qui affiche toutes les boules à neige dont la description contient la chaîne de caractères. Vous pouvez vous aider de la méthode contains de la classe String qui retourne vrai si une chaîne contient une sous-chaîne passée en paramètre. Par exemple "ceci est un test".contains("un") vaut true.
+Faire une méthode filtre qui prend en paramètre une chaîne de caractères et retire toutes les boules à neige dont la description contient la chaîne de caractères.
+Notre collectionneur est tellement passionné qu'il a parfois des doublons dans sa collection. Pour qu'une boule à neige soit en doublon il est nécessaire qu'elle ait exactement la même description et les mêmes dimensions qu'une autre. Ajouter dans la classe BouleANeige une méthode egaleA qui prend en argument une autre boule à neige et renvoie vrai si les deux boules à neiges on exactement les mêmes caractéristiques. 
+Mettez ensuite en place une méthode retireDoublons au sein de la classe MaBelleCollection qui effectue la recherche et le retrait des doublons au sein de la collection. Cette méthode ne doit pas prendre de paramètres mais doit retourner l'ensemble des boules à neige en doublon retirées.
+Vous placerez l'intégralité de ce projet BlueJ et les réponses aux questions dans une archive que vous pouvez déposer ci-dessous.
+ Rendu du devoir

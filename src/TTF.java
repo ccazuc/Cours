@@ -13,6 +13,8 @@ import java.nio.ByteOrder;
 
 import org.newdawn.slick.Color;
 
+import automate.OpenGL;
+
 public final class TTF {
 	
 	private FontMetrics fontMetrics;

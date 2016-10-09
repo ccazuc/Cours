@@ -1,0 +1,10 @@
+1) Une ArrayList n'a pas de taille fixe, contrairement à un tableau, de plus, un tableau peut contenir des types primitifs alors qu'une ArrayList ne peut contenir que des objets.
+2) Ils permettent de parcourir des collections de manière sécurisée, ils permettent également de parcourir des collections comme les HashMap qui ne peuvent pas être parcourus par une boucle itérative.
+3) C'est l'indice n-1.
+4) 5.
+5) Il contient 10 chaînes de caractères.
+6) Une boucle de type for each.
+7) Une boucle de type itérative.
+8) Il permet de mettre la valeur d'un objet à null, donc de lui enlever sa valeur, tout en conservant la référence de l'objet, c'est très pratique lorsque l'on "enlever" un élément d'un tableau.
+9) C'est le fait de créer plusieurs méthodes avec le même nom, mais différents arugments. Oui.
+10) Oui, cela permet de ne pouvoir l'utiliser qu'à l'intérieur de la classe, cela évite qu'un utilisateur d'une librairie ait accès à des méthodes qu'il n'est pas censé pouvoir utliser, cela permet également de mieux structurer un programme pour ne pas mettre des méthodes public alors qu'elles ne seront utilisées qu'à l'intérieur de la classe.
