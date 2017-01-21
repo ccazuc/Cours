@@ -28,7 +28,7 @@ public class LoopWithIntvsLength {
 			}
 			delta = System.nanoTime()-timer;
 			averageSizeTime+= delta;
-			System.out.println("size took "+delta+" ns to execute.");
+			//System.out.println("size took "+delta+" ns to execute.");
 			i = 0;
 			count = 0;
 			int length = list.size();
@@ -41,8 +41,8 @@ public class LoopWithIntvsLength {
 			}
 			delta = System.nanoTime()-timer;
 			averageLengthTime+= delta;
-			System.out.println("int took "+delta+" ns to execute.");
-			System.out.println(count);
+			//System.out.println("int took "+delta+" ns to execute.");
+			//System.out.println(count);
 			j++;
 		}
 		System.out.println("Average for size : "+(averageSizeTime/j)+" ns.");
