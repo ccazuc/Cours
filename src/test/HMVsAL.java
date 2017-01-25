@@ -1,5 +1,6 @@
 package test;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class HMVsAL {
@@ -33,14 +34,15 @@ public class HMVsAL {
 		HMVsAL tt = test.get(searched);
 		System.out.println("HashMap's get time: "+(System.nanoTime()-timer));
 		timer = System.nanoTime();
-		for(HMVsAL a : test.values()) {
+		Collection<HMVsAL> collection = test.values();
+		for(HMVsAL a : collection) {
 			if(a.getValue() == searched) {
 				break;
 			}
 		}
 		long forEachTime = System.nanoTime()-timer;
-		System.out.println("HashMap's for each time: "+forEachTime);
-		System.out.println("ForEach took "+(forEachTime*1d/iteTime)+"x more time than ite");
+		System.out.println("HashMap's for each time collection: "+forEachTime);
+		timer = System.nanoTime();
 	}
 	
 	public HMVsAL(int test) {
