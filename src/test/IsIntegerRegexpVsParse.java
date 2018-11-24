@@ -14,7 +14,7 @@ public class IsIntegerRegexpVsParse {
 		long delta;
 		long timer;
 		int j = 0;
-		while(j < 100000000) {
+		while(j < 1000000) {
 			timer = System.nanoTime();
 			isIntegerParse(test);
 			delta = System.nanoTime()-timer;
@@ -47,8 +47,8 @@ public class IsIntegerRegexpVsParse {
 	}
 	
 	private static boolean isIntegerParseOpti(String str) {
-		int i = -1;
-		while(++i < str.length()) {
+		int i = str.length();
+		while(--i >= 0) {
 			char c = str.charAt(i);
 			if(c < '0' || c > '9') {
 				return false;
